@@ -1,7 +1,19 @@
 import Head from "next/head";
-import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
-  return <div className={styles.container}>Next App</div>;
+function Home() {
+  return (
+    <div>
+      <Head>
+        <title>Home</title>
+      </Head>
+      <h1>Next App</h1>
+      <Link href="/profiles">
+        <a className={styles.link}>Profile Page</a>
+      </Link>
+    </div>
+  );
 }
+
+export default Home;
